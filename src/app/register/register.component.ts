@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from  "@angular/router";
 import { Network } from '@ionic-native/network/ngx';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
 })
-export class HomePage {
-  constructor(private network: Network) { }
+export class RegisterComponent implements OnInit {
+
+  constructor(private  router:  Router,private network: Network) { }
   networkInfo={
     status:''
   }
@@ -27,4 +29,12 @@ export class HomePage {
       }
     }, 3000);
   });
+
+  ngOnInit() {}
+
+  // register(form) {
+  //   this.authService.register(form.value).subscribe((res) => {
+  //     this.router.navigateByUrl('home');
+  //   });
+  // }
 }

@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Network } from '@ionic-native/network/ngx';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
-export class HomePage {
+export class LoginComponent implements OnInit {
+
+
+  ngOnInit() {}
+
   constructor(private network: Network) { }
   networkInfo={
     status:''
@@ -27,4 +31,5 @@ export class HomePage {
       }
     }, 3000);
   });
+
 }

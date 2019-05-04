@@ -14,12 +14,27 @@ export class AppComponent {
       title: 'Home',
       url: '/home',
       icon: 'home'
+    }, 
+    {
+      title: 'Register',
+      url: '/register',
+      icon:'person-add'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    }
+      title: 'Login',
+      url: '/login',
+      icon:'log-in'
+    },
+  
+    {
+      title: 'Scanner',
+      url: '/scanner',
+      icon: 'qr-scanner'
+
+    },
+    
+   
+
   ];
 
   constructor(
